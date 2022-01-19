@@ -1,16 +1,27 @@
-<!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
-    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
-    <title>Hello World!</title>
-  </head>
   <body>
-    <h1>Hello World!</h1>
-    We are using Node.js <span id="node-version"></span>,
-    Chromium <span id="chrome-version"></span>,
-    and Electron <span id="electron-version"></span>.
+    <h1>Todo</h1>
+
+    <form id="sign">
+      <input id="alias" placeholder="username" />
+      <input id="pass" type="password" placeholder="passphrase" />
+      <input id="in" type="submit" value="sign in" />
+      <input id="up" type="button" value="sign up" />
+    </form>
+
+    <ul></ul>
+
+    <form id="said">
+      <input id="say" />
+      <input id="speak" type="submit" value="speak" />
+    </form>
+    <script src="https://cdn.jsdelivr.net/npm/gun/examples/jquery.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gun/gun.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gun/sea.js"></script>
+    <!-- script src="https://cdn.jsdelivr.net/npm/gun/lib/webrtc.js"></script -->
+    <script>
+      // dApp code will go here!
+      var gun = Gun(['http://localhost:8765/gun', 'https://gun-manhattan.herokuapp.com/gun']);
+    </script>
   </body>
 </html>
