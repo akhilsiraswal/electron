@@ -21,6 +21,7 @@
   },
   "dependencies": {
     "electron-squirrel-startup": "^1.0.0",
+    "gun": "^0.2020.1235",
     "nodemon": "^2.0.15",
     "rpmbuild": "^0.0.23"
   },
